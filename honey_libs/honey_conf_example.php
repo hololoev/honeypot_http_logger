@@ -6,8 +6,9 @@ function getConfig() {
       'addr' => '127.0.0.1',
       'dbName' => 'bebebe',
       'user' => 'mememe',
-      'pass' => 'qwertyuiop'
-    ]
+      'pass' => 'qweqweqwe'
+    ],
+    'nodeName' => 'uk-honeypot'
   ];
 }
 

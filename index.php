@@ -39,10 +39,16 @@
 </html>
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include 'honey_libs/honey_conf.php';
 include 'honey_libs/logger.php';
 
+$config = getConfig();
 $info = getRequestInfo();
 $info['scan_type'] = getScanType($info);
-saveLog($info, getConfig()['mysql'] );
+$info['source'] = $config['nodeName'];
+saveLog($info, $config['mysql'] );
 ?>
