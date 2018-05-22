@@ -8,7 +8,10 @@ function getConfig() {
       'user' => 'mememe',
       'pass' => 'qweqweqwe'
     ],
-    'nodeName' => 'uk-honeypot'
+    'nodeName' => 'uk-honeypot',
+    'excludeAddrs' => [
+      '127.0.0.1',
+    ]
   ];
 }
 

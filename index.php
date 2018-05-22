@@ -48,7 +48,10 @@ include 'honey_libs/logger.php';
 
 $config = getConfig();
 $info = getRequestInfo();
-$info['scan_type'] = getScanType($info);
-$info['source'] = $config['nodeName'];
-saveLog($info, $config['mysql'] );
+
+if( !isWhitleListed($info['addr'], $config['excludeAddrs']) ) {
+    $info['scan_type'] = getScanType($info);
+    $info['source'] = $config['nodeName'];
+    saveLog($info, $config['mysql'] );
+}
 ?>

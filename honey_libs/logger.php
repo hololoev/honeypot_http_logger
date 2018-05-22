@@ -17,6 +17,10 @@ function getRequestInfo() {
   return $info;
 }
 
+function isWhitleListed($addr, $whiteList) {
+  return array_search($addr, $whiteList);
+}
+
 function getScanType($info) {
   $upperUrl = strtoupper($info['url']);
 
